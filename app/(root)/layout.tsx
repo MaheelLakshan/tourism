@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/common/Header';
 import React, { ReactNode } from 'react';
 
 const layout = ({ children }: { children: ReactNode }) => {
@@ -6,7 +6,7 @@ const layout = ({ children }: { children: ReactNode }) => {
     <main className="root-container">
       <Header />
       <div className="mx-auto">
-        <div className="mt-20 pb-20">{children}</div>
+        <div className="mt-5 pb-20">{children}</div>
       </div>
     </main>
   );

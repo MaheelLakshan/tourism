@@ -1,3 +1,5 @@
+import Hero from '@/components/heroSection/Hero';
+import { HeroCarousel } from '@/components/heroSection/HeroCarousel';
 import TabsGrid from '@/components/TabsGrid';
 
 import React from 'react';
@@ -5,10 +7,15 @@ import React from 'react';
 const page = () => {
   return (
     <div className="text-primary">
-      <div className="text-2xl font-bold mb-4">Tour Cards</div>
+      <div className="relative">
+        <HeroCarousel />
 
-      <div>
-        
+        <div className="mt-[-140px]">
+          <Hero />
+        </div>
+      </div>
+
+      <div className="mt-10">
         <TabsGrid />
       </div>
     </div>
