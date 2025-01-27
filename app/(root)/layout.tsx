@@ -1,3 +1,4 @@
+import Footer from '@/components/common/Footer';
 import Header from '@/components/common/Header';
 import React, { ReactNode } from 'react';
 
@@ -8,6 +9,7 @@ const layout = ({ children }: { children: ReactNode }) => {
       <div className="mx-auto">
         <div className="mt-5 pb-20">{children}</div>
       </div>
+      <Footer />
     </main>
   );
 };
