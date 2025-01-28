@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Images from '@/constants/Images';
-// import { signOut } from '@/auth';
-// import { Button } from '@/components/ui/button';
 
 const Header = () => {
   return (
@@ -15,25 +13,10 @@ const Header = () => {
       <div className="flex gap-8">
         <Link href="/">Home</Link>
 
-        <Link href="/tourpath">TourPath</Link>
-        <Link href="/thingstodo">ThingsToDo</Link>
+        <Link href="/tour-paths">TourPath</Link>
+        <Link href="/things-todo">ThingsToDo</Link>
         <Link href="/hotels">Hotels</Link>
-        <Link href="/aboutus">AboutUs</Link>
-
-        {/* <ul className="flex flex-row items-center gap-8">
-        <li>
-        <form
-            action={async () => {
-              'use server';
-
-              await signOut();
-            }}
-            className="mb-10"
-          >
-            <Button>Logout</Button>
-            </form>
-        </li>
-        </ul> */}
+        <Link href="/about-us">AboutUs</Link>
       </div>
     </header>
   );

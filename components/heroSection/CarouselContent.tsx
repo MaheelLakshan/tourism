@@ -1,9 +1,12 @@
 'use client';
 
+import { HeroSectionImagesData } from '@/data/HeroSectionImagesData';
+import Image, { StaticImageData } from 'next/image';
+
 interface SlideData {
   title: string;
   button: string;
-  src: string;
+  src: StaticImageData;
 }
 
 interface SlideProps {
@@ -26,7 +29,7 @@ const Slide = ({ slide, index, current }: SlideProps) => {
         }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden ">
-          <img className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100" alt={'hero image'} src={src} loading="eager" />
+          <Image className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100" alt={'hero image'} src={src} loading="eager" />
           {/* <img className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-10" alt={'hero image'} src={src} loading="eager" /> */}
           {/* {<div className="absolute inset-0 bg-black/30" />} */}
         </div>
@@ -35,11 +38,7 @@ const Slide = ({ slide, index, current }: SlideProps) => {
   );
 };
 
-interface CarouselProps {
-  slides: SlideData[];
-}
-
-export default function Carousel({ slides }: CarouselProps) {
+export default function Carousel() {
   const current = 1;
 
   return (
@@ -47,10 +46,10 @@ export default function Carousel({ slides }: CarouselProps) {
       <ul
         className="absolute flex mx-[-4vmin] "
         style={{
-          transform: `translateX(-${current * (100 / slides.length)}%)`,
+          transform: `translateX(-${current * (100 / HeroSectionImagesData.length)}%)`,
         }}
       >
-        {slides.map((slide, index) => (
+        {HeroSectionImagesData.map((slide, index) => (
           <Slide key={index} slide={slide} index={index} current={current} />
         ))}
       </ul>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TourCard } from './TourCard';
+import { TourCardData } from '@/data/TourCardData';
 
 const TabsGrid = () => {
   return (
@@ -18,26 +19,22 @@ const TabsGrid = () => {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="all" className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <TourCard />
-        <TourCard />
-        <TourCard />
-        <TourCard />
-        <TourCard />
-        <TourCard />
+        {TourCardData.map((tour, index) => (
+          <TourCard key={index} {...tour} />
+        ))}
       </TabsContent>
       <TabsContent value="tours" className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <TourCard />
-        <TourCard />
-        <TourCard />
-        <TourCard />
+        {TourCardData.map((tour, index) => (
+          <TourCard key={index} {...tour} />
+        ))}
       </TabsContent>
       <TabsContent value="hotels" className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {/* <TourCard />
         <TourCard />
         <TourCard />
         <TourCard />
         <TourCard />
-        <TourCard />
-        <TourCard />
+        <TourCard /> */}
       </TabsContent>
     </Tabs>
   );
