@@ -14,7 +14,7 @@ function Footer() {
           <div className="pt-4 font-semibold text-lg">Contact Information </div>
           <div className="flex justify-start items-center gap-2">
             <Image src={Images.footer_email} className="w-3 h-3 " alt="email" />
-            Email : info@spareparts.com
+            Email : info@tour.com
           </div>
           <div className="flex justify-start items-center gap-2">
             <Image src={Images.footer_call} className="w-3 h-3 " alt="call" />
@@ -37,13 +37,13 @@ function Footer() {
         <div className="link link-hover">
           <div className="flex justify-start items-center gap-2">
             <Image src={Images.footer_facebook} className="w-3 h-3" alt="facebook" />
-            Spareparts.lk
+            tours.lk
           </div>
         </div>
         <div className="link link-hover">
           <div className="flex justify-start items-center gap-2">
             <Image src={Images.footer_insta} className="w-3 h-3" alt="insta" />
-            Spare_Parts.lk
+            tours.lk
           </div>
         </div>
       </nav>
