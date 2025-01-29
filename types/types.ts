@@ -3,8 +3,8 @@ import { StaticImageData } from 'next/image';
 export type Place = {
   id: number;
   name: string;
-  x: number; // SVG X coordinate
-  y: number; // SVG Y coordinate
+  x: number; 
+  y: number; 
   description: string;
   image: StaticImageData;
 };

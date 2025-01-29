@@ -6,19 +6,13 @@ import React from 'react';
 
 const page = () => {
   return (
-    <div className="text-primary">
-      <div className="relative">
-        <HeroCarousel />
-
-        <div className="mt-[-140px]">
-          <Hero />
-        </div>
+    <>
+      <HeroCarousel />
+      <div className="mt-[-140px] mb-10">
+        <Hero />
       </div>
-
-      <div className="mt-10">
-        <TabsGrid />
-      </div>
-    </div>
+      <TabsGrid />
+    </>
   );
 };
 

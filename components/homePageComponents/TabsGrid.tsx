@@ -8,7 +8,7 @@ import { HotelCard } from './HotelCard';
 const TabsGrid = () => {
   return (
     <Tabs defaultValue="all">
-      <div className="text-4xl font-bold my-2 bg-muted py-4 text-primary justify-center flex">Trending</div>
+      <div className="text-4xl font-bold my-2 bg-muted py-4 text-primary justify-center flex font-mono">Trending</div>
 
       <TabsList className="flex justify-center py-8 gap-8">
         <TabsTrigger value="all" className="text-xl font-bold">

@@ -3,19 +3,16 @@ import SearchBar from '../../common/SearchBar';
 
 const Hero = () => {
   return (
-    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20 bg-primary pb-4">
+    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20 bg-primary pb-4 rounded-3xl">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl font-bold sm:text-6xl py-4 pt-4">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white"> Don’t just choose a destination, explore the journey! </span>
+        <h1 className="text-4xl sm:text-6xl py-4 pt-4 bg-primary-dark rounded-xl ">
+          <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-blue-500 to-white">
+            <span className="font-extrabold">Don’t</span> just choose a destination, <span className=" from-blue-500 to-white"> explore the journey!</span>
+          </span>
         </h1>
-        {/* <p className="mt-2 text-base text-white sm:text-xl">Explore detailed tours, stays, festivals, history, prices, and the best routes for your journey.</p> */}
+
         <hr className="my-4" />
-        {/* <a href="#" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700" role="button">
-          Apply for free
-          <svg className="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </a> */}
+
         <SearchBar />
 
         <div className="grid grid-cols-1 px-20 mt-12 text-left gap-x-12 gap-y-8 sm:grid-cols-3 sm:px-0">
