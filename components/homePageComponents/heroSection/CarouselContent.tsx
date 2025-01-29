@@ -30,8 +30,6 @@ const Slide = ({ slide, index, current }: SlideProps) => {
       >
         <div className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden ">
           <Image className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100" alt={'hero image'} src={src} loading="eager" />
-          {/* <img className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-10" alt={'hero image'} src={src} loading="eager" /> */}
-          {/* {<div className="absolute inset-0 bg-black/30" />} */}
         </div>
       </li>
     </div>
