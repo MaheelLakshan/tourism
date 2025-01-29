@@ -1,25 +1,28 @@
+'use client';
+
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
-import { CardBody, CardContainer, CardItem } from './ui/3d-card';
+import { CardBody, CardContainer, CardItem } from './../ui/3d-card';
 
-
-interface HotelCardProps {
+interface TourCardProps {
   title: string;
-  location: string;
+  path: string;
   highlight: string;
-  facilities: string;
+  attractions: string;
   image: StaticImageData;
+  count: string;
 }
 
-export function HotelCard({ title, location, image, highlight, facilities }: HotelCardProps) {
+export function TourCard({ title, path, image, highlight, attractions, count }: TourCardProps) {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[28rem] h-auto rounded-xl p-6 border  ">
-        <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+        <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white pb-2">
           {title}
         </CardItem>
+        <CardItem className="items-center justify-center w-[80px] bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">{count}+ places</CardItem>
         <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          {location}
+          {path}
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image src={image} height="1000" width="1000" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="thumbnail" />
@@ -29,10 +32,17 @@ export function HotelCard({ title, location, image, highlight, facilities }: Hot
           {highlight}
         </CardItem>
         <CardItem as="p" translateZ="60" className="text-neutral-800 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          <span className="font-bold">facilities: </span>
-          {facilities}
+          <span className="font-bold">attractions: </span>
+          {attractions}
         </CardItem>
-     
+        {/* <div className="flex justify-between items-center mt-20">
+          <CardItem translateZ={20} as={Link} href="https://twitter.com/mannupaaji" target="__blank" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
+            Try now →
+          </CardItem>
+          <CardItem translateZ={20} as="button" className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold">
+            Sign up
+          </CardItem>
+        </div> */}
       </CardBody>
     </CardContainer>
   );

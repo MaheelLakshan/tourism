@@ -1,6 +1,6 @@
-import Hero from '@/components/heroSection/Hero';
-import { HeroCarousel } from '@/components/heroSection/HeroCarousel';
-import TabsGrid from '@/components/TabsGrid';
+import Hero from '@/components/homePageComponents/heroSection/Hero';
+import { HeroCarousel } from '@/components/homePageComponents/heroSection/HeroCarousel';
+import TabsGrid from '@/components/homePageComponents/TabsGrid';
 
 import React from 'react';
 
