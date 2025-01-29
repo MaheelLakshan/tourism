@@ -26,7 +26,6 @@ const TourCard = ({ tour, onClick, isSelected }: TourCardProps) => {
             </span>
           </div>
 
-          {/* <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" /> */}
           <Image className="rounded-lg w-full h-[250px]" width={250} height={250} src={tour.thumbnail} alt="tourImg" />
         </div>
       </PinContainer>
