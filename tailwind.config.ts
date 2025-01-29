@@ -52,6 +52,7 @@ export default {
         },
         primary: {
           DEFAULT: '#0D3E55',
+          dark: '#15202B',
           orage: '#F44336',
           admin: '#25388C',
         },
